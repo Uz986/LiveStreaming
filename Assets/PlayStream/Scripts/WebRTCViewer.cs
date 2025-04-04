@@ -207,6 +207,7 @@ public class WebRTCViewer : MonoBehaviour
         if (renderTexture == null || renderTexture.width != width || renderTexture.height != height)
         {
             renderTexture = new RenderTexture(width, height, 0, RenderTextureFormat.ARGB32);
+
         }
 
         // ✅ Blit the frame into the RenderTexture (for further processing)
@@ -238,7 +239,17 @@ public class WebRTCViewer : MonoBehaviour
 
         if (display != null)
         {
-            //display.texture = _videoTexture;
+            Debug.Log("Eye Index: " + Shader.GetGlobalFloat("_UnityStereoEyeIndex"));
+            RectTransform rt = display.GetComponent<RectTransform>();
+            rt.sizeDelta = new Vector2(renderTexture.width, renderTexture.height);  // Adjust for stereo content
+
+
+            display.texture = renderTexture;
+            if (!display.enabled)
+            {
+                display.enabled = true;
+                loading.SetActive(false);
+            }
             Debug.Log("Updated RawImage with new video frame.");
         }
     }
@@ -294,6 +305,8 @@ public class WebRTCViewer : MonoBehaviour
             _call.Listen(selectedStream);
             ChannelList.SetActive(false);
             display.gameObject.SetActive(true);
+            loading.SetActive(true);
+            //sphereRenderer.gameObject.SetActive(true);
             //VR.SetActive(true);
             Debug.Log($"Listening to stream: {selectedStream}");
 
@@ -318,6 +331,7 @@ public class WebRTCViewer : MonoBehaviour
         ChannelList.SetActive(false);
         StreamingCanvasUI.SetActive(true);
         display.gameObject.SetActive(false);
+        //sphereRenderer.gameObject.SetActive(false);
         VR.SetActive(false);
         StopWatchingStream();
         StartCoroutine(FetchActiveStreams());
