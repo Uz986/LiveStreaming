@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.08596048, g: 0.13642637, b: 0.32298777, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -508,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 4a3af44e5c020344e8f661f35de69eba, type: 2}
+  m_Material: {fileID: 2100000, guid: f3fa05e5bd47800459dd94657810f0eb, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1667,7 +1668,7 @@ MonoBehaviour:
   mediaPlayerUI: {fileID: 2126718621}
   loading: {fileID: 263374865}
   sphereRenderer: {fileID: 640313553}
-  sbsMaterial: {fileID: 2100000, guid: f3fa05e5bd47800459dd94657810f0eb, type: 2}
+  sbsMaterial: {fileID: 2100000, guid: 82543ca46f10b8543a2ca63e2d3f9e1e, type: 2}
   VR: {fileID: 1293343230}
   leftEyeImage: {fileID: 1014140663}
   rightEyeImage: {fileID: 161528799}
@@ -2047,7 +2048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 4a3af44e5c020344e8f661f35de69eba, type: 2}
+  m_Material: {fileID: 2100000, guid: f3fa05e5bd47800459dd94657810f0eb, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -2888,7 +2889,7 @@ PrefabInstance:
     - target: {fileID: 2683195716760517856, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}
       propertyPath: m_HDR
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2683195716760517856, guid: 4ac7df741a9c0a2418ec19477729ee3d,
         type: 3}
@@ -4505,7 +4506,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126718621}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4514,7 +4515,7 @@ RectTransform:
   - {fileID: 1609525481}
   - {fileID: 640313555}
   m_Father: {fileID: 144690678}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -4540,7 +4541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: f3fa05e5bd47800459dd94657810f0eb, type: 2}
+  m_Material: {fileID: 2100000, guid: 82543ca46f10b8543a2ca63e2d3f9e1e, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}

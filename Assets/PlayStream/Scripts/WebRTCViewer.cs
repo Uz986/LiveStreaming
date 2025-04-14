@@ -86,6 +86,7 @@ public class WebRTCViewer : MonoBehaviour
         _call = UnityCallFactory.Instance.Create(NetConfig);
         _call.CallEvent += OnCallEvent;
         //_call.Configure(_mediaConfig);
+        
     }
     private void OnWebRTCError(string error)
     {
@@ -211,7 +212,7 @@ public class WebRTCViewer : MonoBehaviour
         }
 
         // ✅ Blit the frame into the RenderTexture (for further processing)
-        Graphics.Blit(_videoTexture, renderTexture);
+         Graphics.Blit(_videoTexture, renderTexture);
 
         // ✅ Assign to sphere material for SBS rendering
         //sphereRenderer.material.mainTexture = renderTexture;
@@ -234,17 +235,16 @@ public class WebRTCViewer : MonoBehaviour
         // Apply the RenderTexture to the SBS Shader Material
         if (sbsMaterial != null)
         {
-            sbsMaterial.SetTexture("_MainTex", renderTexture);
+            sbsMaterial.SetTexture("_MainTex", _videoTexture);
         }
-
+        
         if (display != null)
         {
             Debug.Log("Eye Index: " + Shader.GetGlobalFloat("_UnityStereoEyeIndex"));
             RectTransform rt = display.GetComponent<RectTransform>();
-            rt.sizeDelta = new Vector2(renderTexture.width, renderTexture.height);  // Adjust for stereo content
-
-
+            rt.sizeDelta = new Vector2(renderTexture.width, renderTexture.height);
             display.texture = renderTexture;
+            // do av pro display to render texture;
             if (!display.enabled)
             {
                 display.enabled = true;
@@ -307,7 +307,7 @@ public class WebRTCViewer : MonoBehaviour
             display.gameObject.SetActive(true);
             loading.SetActive(true);
             //sphereRenderer.gameObject.SetActive(true);
-            //VR.SetActive(true);
+          //  VR.SetActive(true);
             Debug.Log($"Listening to stream: {selectedStream}");
 
             // 🎤 Attach WebRTC audio stream to Unity AudioSource

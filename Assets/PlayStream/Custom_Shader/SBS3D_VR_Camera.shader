@@ -60,9 +60,14 @@ Shader "Custom/SBS3D_VR_Camera"
                 if (_IsSBS > 0.5)
                 {
                     if (eyeIndex == 1)  // Right Eye
+                    {
                         o.uv.x = 0.5 + (o.uv.x * 0.5);
+                    }
                     else  // Left Eye
-                        o.uv.x = o.uv.x * 0.5;
+                    {
+                       // o.uv.x = o.uv.x * 0.5;
+                        o.uv.x = 0.5 + (o.uv.x * 0.5);
+                    }
                 }
 
                 return o;

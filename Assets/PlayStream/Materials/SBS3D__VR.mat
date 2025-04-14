@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SBS3D__VR
-  m_Shader: {fileID: 4800000, guid: dcd23c40d13d443439694c0b986e4e48, type: 3}
+  m_Shader: {fileID: 4800000, guid: 29732474874ac1f44b8ee277f7c0b3b6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -45,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 8400000, guid: 38f0f196131c1f841b8f3239c8dad0a4, type: 2}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -72,6 +72,7 @@ Material:
     - _Distance: 100
     - _DstBlend: 0
     - _Exposure: 1
+    - _Eye: 0
     - _FadeEnd: 0.5
     - _FadeStart: 0.5
     - _GlossMapScale: 1
