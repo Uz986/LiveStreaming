@@ -1,6 +1,9 @@
 🎥 **Watch Streaming Application for VR**
 
 ✅ Prerequisites
+
+[Download Unity Hub](https://unity.com/download)
+
 Unity Version: 2022.3.44f1 (Install via Unity Hub)
 
 🛠️ **How to Open the Project**
